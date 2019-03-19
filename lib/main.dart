@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'demo/bottom_navigation_bar_demo.dart';
 import 'demo/list_view_demo.dart';
 import 'demo/base_demo.dart';
+import 'demo/LayoutDemo.dart';
 
 /// 原来写法
 //void main() {
@@ -77,7 +78,7 @@ class Home extends StatelessWidget {
               children: <Widget>[
                 ListViewDemo(),
                 BaseDemo(),
-                Icon(Icons.directions_bike, size: 200.0, color: Colors.orange,),
+                LayoutDemo(),
               ],
           ),
           drawer: Drawer(
