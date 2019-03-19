@@ -44,6 +44,6 @@ class _BottomNavigationBarDemoState extends State<BottomNavigationBarDemo> {
           title: Text("My"),
         ),
       ],
-    ),
+    );
   }
 }
