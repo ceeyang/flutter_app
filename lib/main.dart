@@ -5,6 +5,8 @@ import 'demo/base_demo.dart';
 import 'demo/LayoutDemo.dart';
 import 'demo/view_demo.dart';
 
+import 'project/bottom_tabbar.dart';
+
 /// 原来写法
 //void main() {
 //  runApp(
@@ -13,8 +15,29 @@ import 'demo/view_demo.dart';
 //}
 
 /// 程序入口
-void main() => runApp(App());
+void main() => runApp(NewApp());
 
+class NewApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return new MaterialApp(
+      /// 关闭 debug 标签
+      debugShowCheckedModeBanner: true,
+      /// 返回主页面
+      home: BottomTabBarWidget(),
+      /// 自定义主题
+      theme: ThemeData(
+        /// 设置主题颜色
+        primaryColor: Colors.deepPurple,
+        /// 设置高亮状态颜色
+        highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
+        /// 设置水波纹颜色
+        splashColor: Colors.white30,
+      ),
+    );
+  }
+}
 
 class App extends StatelessWidget {
   @override
@@ -22,7 +45,7 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       /// Scaffold : 脚手架
-      home: Home(),
+      home: new Main(),
       /// 不显示右上角 debug 标签
       debugShowCheckedModeBanner: false,
       /// 自定义主题
@@ -40,7 +63,7 @@ class App extends StatelessWidget {
 
 
 ///
-class Home extends StatelessWidget {
+class Main extends StatelessWidget {
 
   ///
   @override
