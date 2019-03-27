@@ -5,6 +5,9 @@ import 'demo/base_demo.dart';
 import 'demo/LayoutDemo.dart';
 import 'demo/view_demo.dart';
 
+import 'project/about_page.dart';
+import 'package:flutter_app/project/setting_page.dart';
+
 import 'project/bottom_tabbar.dart';
 
 /// 原来写法
@@ -35,6 +38,10 @@ class NewApp extends StatelessWidget {
         /// 设置水波纹颜色
         splashColor: Colors.white30,
       ),
+      routes: {
+        '/about': (context) => AboutPage(title: "About",),
+        '/setting': (context) => SettingPage(title: "About",),
+      },
     );
   }
 }
@@ -45,7 +52,11 @@ class App extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       /// Scaffold : 脚手架
-      home: new Main(),
+//      home: new Main(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => Main(),
+      },
       /// 不显示右上角 debug 标签
       debugShowCheckedModeBanner: false,
       /// 自定义主题

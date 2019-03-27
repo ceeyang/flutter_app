@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/project/setting_page.dart';
 
 class MinePage extends StatelessWidget {
   @override
@@ -8,7 +9,12 @@ class MinePage extends StatelessWidget {
       slivers: <Widget>[
         SliverAppBar(
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.settings), onPressed: () => debugPrint("setting btn did click"),)
+            IconButton(
+              icon: Icon(Icons.settings),
+              onPressed: () {
+                Navigator.pushNamed(context, "/setting");
+              },
+            )
           ],
           expandedHeight: 180,
           flexibleSpace: FlexibleSpaceBar(

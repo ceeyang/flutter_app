@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/model/post.dart';
+import 'package:flutter_app/project/search_page.dart';
+import 'discover_detail_page.dart';
 
 class DiscoverPage extends StatelessWidget {
   @override
@@ -12,7 +14,16 @@ class DiscoverPage extends StatelessWidget {
           title: Text("发现"),
           floating: true,
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.search), onPressed: () => debugPrint('discover search btn did click'),)
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () => {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => SearchPage(title: "搜索",)
+                  ),
+                ),
+              },
+            )
           ],
         ),
         SliverPadding(
@@ -66,6 +77,22 @@ class SliverListDemo extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Positioned.fill(
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  splashColor: Colors.white.withOpacity(0.3),
+                  highlightColor: Colors.white.withOpacity(0.1),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => DiscoverDetailPage(post: posts[index],)
+                      )
+                    );
+                  },
+                ),
               ),
             ),
           ],
