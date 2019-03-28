@@ -19,7 +19,22 @@ class MinePage extends StatelessWidget {
           expandedHeight: 180,
           flexibleSpace: FlexibleSpaceBar(
             centerTitle: false,
-            title: Text("Cee"),
+            title: Container(
+              child: Row(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed("/login");
+                    },
+                    child: CircleAvatar(
+                      backgroundImage: new NetworkImage("http://p2.qhimg.com/dr/200_200_/t0168bce73440d85200.jpg",),
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+                  Text("Cee Yang"),
+                ],
+              ),
+            ),
             background: Image.network(
               "https://resources.ninghao.net/images/overkill.png",
               fit: BoxFit.fill,

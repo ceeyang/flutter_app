@@ -7,6 +7,7 @@ import 'demo/view_demo.dart';
 
 import 'project/about_page.dart';
 import 'package:flutter_app/project/setting_page.dart';
+import 'project/login_page.dart';
 
 import 'project/bottom_tabbar.dart';
 
@@ -41,6 +42,7 @@ class NewApp extends StatelessWidget {
       routes: {
         '/about': (context) => AboutPage(title: "About",),
         '/setting': (context) => SettingPage(title: "About",),
+        '/login': (context) => LoginPage(),
       },
     );
   }
