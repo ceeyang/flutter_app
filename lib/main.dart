@@ -4,6 +4,7 @@ import 'demo/list_view_demo.dart';
 import 'demo/base_demo.dart';
 import 'demo/LayoutDemo.dart';
 import 'demo/view_demo.dart';
+import 'demo/demo_list.dart';
 
 import 'project/about_page.dart';
 import 'package:flutter_app/project/setting_page.dart';
@@ -43,6 +44,7 @@ class NewApp extends StatelessWidget {
         '/about': (context) => AboutPage(title: "About",),
         '/setting': (context) => SettingPage(title: "About",),
         '/login': (context) => LoginPage(),
+        '/demo_list': (context) => DemoList(),
       },
     );
   }

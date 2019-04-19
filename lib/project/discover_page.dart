@@ -10,6 +10,7 @@ class DiscoverPage extends StatelessWidget {
     return CustomScrollView(
 
       slivers: <Widget>[
+
         SliverAppBar(
           title: Text("发现"),
           floating: true,
@@ -26,6 +27,7 @@ class DiscoverPage extends StatelessWidget {
             )
           ],
         ),
+
         SliverPadding(
           padding: EdgeInsets.all(15.0),
           sliver: SliverListDemo(),

@@ -7,13 +7,13 @@ class HomePage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: Icon(Icons.search), onPressed: () => debugPrint('hahahha ')),
+        leading: IconButton(icon: Icon(Icons.menu), onPressed: () => Navigator.pushNamed(context, '/demo_list')),
         /// 右边按钮集合
         actions: <Widget>[
           IconButton(icon: Icon(Icons.file_download), tooltip: "Search Btn", onPressed: () => debugPrint("search btn is clicked")),
           IconButton(icon: Icon(Icons.history), tooltip: "Search Btn", onPressed: () => debugPrint("history btn is clicked")),
         ],
-        title: Text('首页'),
+        title: Text('首页', textAlign: TextAlign.center,),
         elevation: 20.0,
       ),
       body: HomePageView(),
